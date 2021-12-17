@@ -1,0 +1,6 @@
+rcc.cpp:12:6:void Rcc::AHB1_ENR_t::gpioa_clk()	16	static
+rcc.cpp:18:6:void Rcc::AHB1_ENR_t::gpiob_clk()	16	static
+rcc.cpp:24:6:void Rcc::AHB1_ENR_t::gpioc_clk()	16	static
+rcc.cpp:30:6:void Rcc::AHB1_ENR_t::gpiod_clk()	16	static
+rcc.cpp:36:6:void Rcc::AHB1_ENR_t::gpioe_clk()	16	static
+rcc.cpp:42:6:void Rcc::AHB1_ENR_t::gpiof_clk()	16	static

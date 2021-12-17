@@ -1,0 +1,1 @@
+gpio.cpp:12:7:void Gpio::GPIO_T::mode_output_pin15()	16	static
