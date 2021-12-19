@@ -1,0 +1,17 @@
+/*
+ * rcc.cpp
+ *
+ *  Created on: Dec 16, 2021
+ *      Author: khorton
+ */
+
+#include <rcc.h>
+
+namespace Rcc {
+
+void Rcc::start_clk()
+{
+	AHB1_ENR_t *x = (AHB1_ENR_t*)0x40023830;
+}
+
+} /* namespace Rcc */

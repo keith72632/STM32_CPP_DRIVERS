@@ -1,0 +1,19 @@
+/*
+ * rcc.h
+ *
+ *  Created on: Dec 16, 2021
+ *      Author: khorton
+ */
+
+#ifndef RCC_H_
+#define RCC_H_
+
+#include <stdint.h>
+
+namespace Rcc {
+	typedef struct {
+		uint32_t
+	}Ahb1enr_t;
+} /* namespace Rcc */
+
+#endif /* RCC_H_ */

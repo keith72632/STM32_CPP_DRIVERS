@@ -1,0 +1,23 @@
+/*
+ * rcc.h
+ *
+ *  Created on: Dec 16, 2021
+ *      Author: khorton
+ */
+
+#ifndef RCC_H_
+#define RCC_H_
+
+#include <stdint.h>
+
+namespace Rcc {
+	typedef struct {
+		uint32_t gpioa;
+		uint32_t gpiob;
+		uint32_t gpioc;
+		uint32_t gpiod;
+		uint32_t gpioe;
+	}AHB1_ENR_t;
+} /* namespace Rcc */
+
+#endif /* RCC_H_ */

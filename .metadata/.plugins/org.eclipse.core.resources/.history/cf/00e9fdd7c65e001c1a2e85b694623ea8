@@ -1,0 +1,18 @@
+/*
+ * gpio.cpp
+ *
+ *  Created on: Dec 16, 2021
+ *      Author: khorton
+ */
+
+#include <gpio.h>
+
+gpio::gpio() {
+	// TODO Auto-generated constructor stub
+
+}
+
+gpio::~gpio() {
+	// TODO Auto-generated destructor stub
+}
+

@@ -20,6 +20,7 @@
 #include <stdio.h>
 #include "rcc.h"
 #include "gpio.h"
+#include "stm32f407xx.h"
 
 int main(void)
 {
@@ -27,7 +28,8 @@ int main(void)
 	Gpio::GPIO_T *gpio_d = (Gpio::GPIO_T*)0x40020c00;
 
 	clk_d->gpiod_clk();
-	gpio_d->mode_output_pin15();
+	gpio_d->mode_output_pin15(GPIO_MODE_ODR);
+	gpio_d->led_on();
 
 	printf("Hello world\n");
     /* Loop forever */

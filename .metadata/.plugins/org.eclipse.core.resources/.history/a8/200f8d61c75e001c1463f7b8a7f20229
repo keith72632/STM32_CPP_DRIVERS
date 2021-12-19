@@ -1,0 +1,16 @@
+/*
+ * rcc.cpp
+ *
+ *  Created on: Dec 16, 2021
+ *      Author: khorton
+ */
+
+#include <rcc.h>
+
+namespace Rcc {
+
+	typedef struct {
+
+	};
+
+} /* namespace Rcc */

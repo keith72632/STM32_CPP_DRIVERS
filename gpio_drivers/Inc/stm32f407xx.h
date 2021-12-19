@@ -19,6 +19,7 @@
 #define GPIOA_AFRL       (GPIOA_BASE + 0x20)
 #define GPIOA_AFRH       (GPIOA_BASE + 0x24)
 
+#define GPIO_MODE_ODR    0x01
 #define GPIOD_CLK        0x40023830
 #define GPIOD_BASE       0x40020c00
 #define GPIOD_MODE       GPIOD_BASE
