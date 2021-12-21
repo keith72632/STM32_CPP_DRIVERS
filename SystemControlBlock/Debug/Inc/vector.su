@@ -1,0 +1,4 @@
+vector.cpp:9:17:void HardFault_Handler()	8	static
+vector.cpp:15:17:void MemManage_Handler()	8	static
+vector.cpp:21:17:void BusFault_Handler()	8	static
+vector.cpp:27:17:void UsageFault_Handler()	8	static
