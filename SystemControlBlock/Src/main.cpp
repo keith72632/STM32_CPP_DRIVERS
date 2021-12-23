@@ -20,26 +20,46 @@
 #include <stdio.h>
 #include <algorithm>
 #include <array>
+#include <stack>
 #include "scb.h"
 #include "faults.h"
 #include "systick.h"
+
+	//led lights
+uint32_t *rcc_d = (uint32_t*)0x40023830;
+uint32_t *mode = (uint32_t*)0x40020c00;
+
+
 int main(void)
 {
+	*rcc_d |= 1 << 3; //enable gpio d clock
+	*mode |= (1 << 30); //pin 15 output mode
+
 	//just some dumb shit
 	std::array<char, 5> list{{'s', 't', 'a', 'r', 't'}};
 	std::for_each(list.begin(), list.end(), [](char e){ printf("%c\n", e); });
     /* Loop forever */
-	SCB::SCB *scb = (SCB::SCB*)0xe000ed00;
 
+
+
+	SCB::SCB *scb = (SCB::SCB*)0xe000ed00;
 	scb->shcrs.all_faults_enable();
-//	Faults::gen_memory_fault();
+	//Faults::gen_memory_fault();
 
 	Systick::systick *syst = (Systick::systick*)0xe000e010;
 	syst->control_status_reg.systick_enable();
-	//todo
-	syst->current_val.set_current(0x01);
+	syst->control_status_reg.systick_int();
+
+	//this 24 bit value is the time between "ticks"
+	syst->reload_reg.load(0xfffff);
+
+	//pushing this garbage just to check stack analyzation in systick handler
+	std::stack<int> stck;
+	stck.push(66666);
+	uint32_t val = stck.top();
 
 	for(;;);
 }
+
 
 

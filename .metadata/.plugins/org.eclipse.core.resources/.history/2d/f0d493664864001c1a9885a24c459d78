@@ -1,0 +1,17 @@
+/*
+ * handler.cpp
+ *
+ *  Created on: Dec 23, 2021
+ *      Author: khorton
+ */
+
+#include <stdint.h>
+#include <stdio.h>
+
+uint32_t *odr = (uint32_t*)0x40020c14;
+
+extern "C" void SysTick_Handler()
+{
+	*odr ^= 1 << 15;
+	printf("tick\n");
+}

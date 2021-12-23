@@ -22,6 +22,7 @@ namespace Systick {
 		uint32_t reserved2     :15;
 	public:
 		void systick_enable();
+		void systick_int();
 	}__attribute__((packed))SYST_CSR_t;
 
 	typedef struct SYST_RVR {

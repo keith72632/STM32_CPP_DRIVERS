@@ -1,7 +1,24 @@
-18:29:39 **** Clean-only build of configuration Debug for project SystemControlBlock ****
-make -j12 clean 
-rm -rf ./Startup/startup_stm32f407vgtx.d ./Startup/startup_stm32f407vgtx.o
-rm -rf ./Src/main.d ./Src/main.o ./Src/syscalls.d ./Src/syscalls.o ./Src/sysmem.d ./Src/sysmem.o
-rm -rf ./Inc/faults.d ./Inc/faults.o ./Inc/scb.d ./Inc/scb.o ./Inc/systick.d ./Inc/systick.o
-rm -rf SystemControlBlock.bin SystemControlBlock.elf SystemControlBlock.list default.size.stdout
+17:47:43 **** Incremental Build of configuration Debug for project SystemControlBlock ****
+make -j12 all 
+arm-none-eabi-g++ "../Src/handler.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Src/handler.d" -MT"Src/handler.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/handler.o"
+arm-none-eabi-g++ -o "SystemControlBlock.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/khorton/Documents/EmbededCppDrivers/SystemControlBlock/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SystemControlBlock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SystemControlBlock.elf
+ 
+arm-none-eabi-size   SystemControlBlock.elf 
+arm-none-eabi-objdump -h -S  SystemControlBlock.elf  > "SystemControlBlock.list"
+arm-none-eabi-objcopy  -O binary  SystemControlBlock.elf  "SystemControlBlock.bin"
+   text	   data	    bss	    dec	    hex	filename
+   9620	    120	   1600	  11340	   2c4c	SystemControlBlock.elf
+Finished building: default.size.stdout
+ 
+Finished building: SystemControlBlock.bin
+ 
+Finished building: SystemControlBlock.list
+ 
+17:47:48 **** Incremental Build of configuration Debug for project SystemControlBlock ****
+make -j12 all 
+arm-none-eabi-size   SystemControlBlock.elf 
+   text	   data	    bss	    dec	    hex	filename
+   9620	    120	   1600	  11340	   2c4c	SystemControlBlock.elf
+Finished building: default.size.stdout
  

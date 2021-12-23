@@ -1,8 +1,72 @@
+new:173:33:void* operator new(std::size_t, void*)	16	static
 gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	16	static
-main.cpp:30:42:main()::<lambda(char)>	16	static
-main.cpp:26:5:int main()	40	static
+stl_deque.h:93:3:constexpr std::size_t std::__deque_buf_size(std::size_t)	16	static
+main.cpp:40:42:main()::<lambda(char)>	16	static
+main.cpp:33:5:int main()	88	static
 array:126:7:std::array<_Tp, _Nm>::value_type* std::array<_Tp, _Nm>::begin() [with _Tp = char; unsigned int _Nm = 5]	16	static
 array:134:7:std::array<_Tp, _Nm>::value_type* std::array<_Tp, _Nm>::end() [with _Tp = char; unsigned int _Nm = 5]	16	static
 stl_algo.h:3870:5:_Funct std::for_each(_IIter, _IIter, _Funct) [with _IIter = char*; _Funct = main()::<lambda(char)>]	32	static
+stl_stack.h:156:2:std::stack<_Tp, _Sequence>::stack() [with _Seq = std::deque<int, std::allocator<int> >; _Requires = void; _Tp = int; _Sequence = std::deque<int, std::allocator<int> >]	16	static
+stl_stack.h:238:7:void std::stack<_Tp, _Sequence>::push(std::stack<_Tp, _Sequence>::value_type&&) [with _Tp = int; _Sequence = std::deque<int, std::allocator<int> >]	24	static
+stl_stack.h:206:7:std::stack<_Tp, _Sequence>::reference std::stack<_Tp, _Sequence>::top() [with _Tp = int; _Sequence = std::deque<int, std::allocator<int> >]	16	static
 array:234:7:std::array<_Tp, _Nm>::value_type* std::array<_Tp, _Nm>::data() [with _Tp = char; unsigned int _Nm = 5]	16	static
+stl_deque.h:915:7:std::deque<_Tp, _Alloc>::deque() [with _Tp = int; _Alloc = std::allocator<int>]	16	static
+stl_deque.h:1210:7:std::deque<_Tp, _Alloc>::iterator std::deque<_Tp, _Alloc>::end() [with _Tp = int; _Alloc = std::allocator<int>]	16	static
+stl_deque.h:167:7:std::_Deque_iterator<_Tp, _Ref, _Ptr>::_Deque_iterator(const std::_Deque_iterator<_Tp, _Ref, _Ptr>&) [with _Tp = int; _Ref = int&; _Ptr = int*]	16	static
+move.h:99:5:constexpr typename std::remove_reference<_Tp>::type&& std::move(_Tp&&) [with _Tp = int&]	16	static
+stl_deque.h:1584:7:void std::deque<_Tp, _Alloc>::push_back(std::deque<_Tp, _Alloc>::value_type&&) [with _Tp = int; _Alloc = std::allocator<int>]	16	static
+stl_deque.h:1500:7:std::deque<_Tp, _Alloc>::reference std::deque<_Tp, _Alloc>::back() [with _Tp = int; _Alloc = std::allocator<int>]	32	static
 array:59:7:static constexpr _Tp* std::__array_traits<_Tp, _Nm>::_S_ptr(const _Tp (&)[_Nm]) [with _Tp = char; unsigned int _Nm = 5]	16	static
+stl_deque.h:508:7:std::_Deque_base<_Tp, _Alloc>::_Deque_base() [with _Tp = int; _Alloc = std::allocator<int>]	16	static
+stl_deque.h:638:7:void std::_Deque_base<_Tp, _Alloc>::_M_deallocate_map(std::_Deque_base<_Tp, _Alloc>::_Map_pointer, std::size_t) [with _Tp = int; _Alloc = std::allocator<int>]	32	static
+deque.tcc:162:7:) [with _Args = {int}; _Tp = int; _Alloc = std::allocator<int>]	24	static
+stl_deque.h:207:7:std::_Deque_iterator<_Tp, _Ref, _Ptr>::_Self& std::_Deque_iterator<_Tp, _Ref, _Ptr>::operator--() [with _Tp = int; _Ref = int&; _Ptr = int*]	16	static
+stl_deque.h:179:7:std::_Deque_iterator<_Tp, _Ref, _Ptr>::reference std::_Deque_iterator<_Tp, _Ref, _Ptr>::operator*() const [with _Tp = int; _Ref = int&; _Ptr = int*]	16	static
+stl_deque.h:575:2:std::_Deque_base<_Tp, _Alloc>::_Deque_impl::_Deque_impl() [with _Tp = int; _Alloc = std::allocator<int>]	16	static
+stl_deque.h:699:5:void std::_Deque_base<_Tp, _Alloc>::_M_initialize_map(std::size_t) [with _Tp = int; _Alloc = std::allocator<int>]	48	static
+stl_deque.h:613:7:std::_Deque_base<_Tp, _Alloc>::_Map_alloc_type std::_Deque_base<_Tp, _Alloc>::_M_get_map_allocator() const [with _Tp = int; _Alloc = std::allocator<int>]	16	static
+allocator.h:153:7:std::allocator< <template-parameter-1-1> >::~allocator() [with _Tp = int*]	16	static
+alloc_traits.h:469:7:static void std::allocator_traits<std::allocator<_Tp> >::deallocate(std::allocator_traits<std::allocator<_Tp> >::allocator_type&, std::allocator_traits<std::allocator<_Tp> >::pointer, std::allocator_traits<std::allocator<_Tp> >::size_type) [with _Tp = int*]	24	static
+move.h:74:5:constexpr _Tp&& std::forward(typename std::remove_reference<_Tp>::type&) [with _Tp = int]	16	static
+alloc_traits.h:482:2:) [with _Up = int; _Args = {int}; _Tp = int]	24	static
+deque.tcc:479:7:) [with _Args = {int}; _Tp = int; _Alloc = std::allocator<int>]	24	static
+stl_deque.h:273:7:void std::_Deque_iterator<_Tp, _Ref, _Ptr>::_M_set_node(std::_Deque_iterator<_Tp, _Ref, _Ptr>::_Map_pointer) [with _Tp = int; _Ref = int&; _Ptr = int*]	24	static
+allocator.h:138:7:std::allocator< <template-parameter-1-1> >::allocator() [with _Tp = int]	16	static
+stl_deque.h:150:7:std::_Deque_iterator<_Tp, _Ref, _Ptr>::_Deque_iterator() [with _Tp = int; _Ref = int&; _Ptr = int*]	16	static
+stl_algobase.h:222:5:constexpr const _Tp& std::max(const _Tp&, const _Tp&) [with _Tp = unsigned int]	16	static
+stl_deque.h:631:7:std::_Deque_base<_Tp, _Alloc>::_Map_pointer std::_Deque_base<_Tp, _Alloc>::_M_allocate_map(std::size_t) [with _Tp = int; _Alloc = std::allocator<int>]	32	static
+stl_deque.h:738:5:void std::_Deque_base<_Tp, _Alloc>::_M_create_nodes(std::_Deque_base<_Tp, _Alloc>::_Map_pointer, std::_Deque_base<_Tp, _Alloc>::_Map_pointer) [with _Tp = int; _Alloc = std::allocator<int>]	32	static
+stl_deque.h:609:7:const _Tp_alloc_type& std::_Deque_base<_Tp, _Alloc>::_M_get_Tp_allocator() const [with _Tp = int; _Alloc = std::allocator<int>]	16	static
+allocator.h:151:2:std::allocator< <template-parameter-1-1> >::allocator(const std::allocator<_Up>&) [with _Tp1 = int; _Tp = int*]	16	static
+new_allocator.h:89:7:__gnu_cxx::new_allocator<_Tp>::~new_allocator() [with _Tp = int*]	16	static
+new_allocator.h:119:7:void __gnu_cxx::new_allocator<_Tp>::deallocate(__gnu_cxx::new_allocator<_Tp>::pointer, __gnu_cxx::new_allocator<_Tp>::size_type) [with _Tp = int*]	24	static
+new_allocator.h:144:2:) [with _Up = int; _Args = {int}; _Tp = int]	32	static
+stl_deque.h:1298:7:std::deque<_Tp, _Alloc>::size_type std::deque<_Tp, _Alloc>::size() const [with _Tp = int; _Alloc = std::allocator<int>]	16	static
+stl_deque.h:1303:7:std::deque<_Tp, _Alloc>::size_type std::deque<_Tp, _Alloc>::max_size() const [with _Tp = int; _Alloc = std::allocator<int>]	16	static
+stl_deque.h:2194:7:void std::deque<_Tp, _Alloc>::_M_reserve_map_at_back(std::deque<_Tp, _Alloc>::size_type) [with _Tp = int; _Alloc = std::allocator<int>]	16	static
+stl_deque.h:617:7:std::_Deque_base<_Tp, _Alloc>::_Ptr std::_Deque_base<_Tp, _Alloc>::_M_allocate_node() [with _Tp = int; _Alloc = std::allocator<int>]	24	static
+stl_deque.h:130:21:static std::size_t std::_Deque_iterator<_Tp, _Ref, _Ptr>::_S_buffer_size() [with _Tp = int; _Ref = int&; _Ptr = int*]	8	static
+new_allocator.h:80:7:__gnu_cxx::new_allocator<_Tp>::new_allocator() [with _Tp = int]	16	static
+alloc_traits.h:443:7:static _Tp* std::allocator_traits<std::allocator<_Tp> >::allocate(std::allocator_traits<std::allocator<_Tp> >::allocator_type&, std::allocator_traits<std::allocator<_Tp> >::size_type) [with _Tp = int*]	16	static
+new_allocator.h:80:7:__gnu_cxx::new_allocator<_Tp>::new_allocator() [with _Tp = int*]	16	static
+stl_deque.h:370:5:typename std::_Deque_iterator<_Tp, _Ref, _Ptr>::difference_type std::operator-(const std::_Deque_iterator<_Tp, _Ref, _Ptr>&, const std::_Deque_iterator<_Tp, _Ref, _Ptr>&) [with _Tp = int; _Ref = int&; _Ptr = int*]	16	static
+stl_deque.h:1896:7:static std::deque<_Tp, _Alloc>::size_type std::deque<_Tp, _Alloc>::_S_max_size(const _Tp_alloc_type&) [with _Tp = int; _Alloc = std::allocator<int>]	24	static
+deque.tcc:926:5:void std::deque<_Tp, _Alloc>::_M_reallocate_map(std::deque<_Tp, _Alloc>::size_type, bool) [with _Tp = int; _Alloc = std::allocator<int>]	56	static
+alloc_traits.h:443:7:static _Tp* std::allocator_traits<std::allocator<_Tp> >::allocate(std::allocator_traits<std::allocator<_Tp> >::allocator_type&, std::allocator_traits<std::allocator<_Tp> >::size_type) [with _Tp = int]	16	static
+new_allocator.h:102:7:_Tp* __gnu_cxx::new_allocator<_Tp>::allocate(__gnu_cxx::new_allocator<_Tp>::size_type, const void*) [with _Tp = int*]	24	static
+alloc_traits.h:505:7:static std::allocator_traits<std::allocator<_Tp> >::size_type std::allocator_traits<std::allocator<_Tp> >::max_size(const allocator_type&) [with _Tp = int]	16	static
+stl_algobase.h:198:5:constexpr const _Tp& std::min(const _Tp&, const _Tp&) [with _Tp = unsigned int]	16	static
+stl_algobase.h:465:5:_OI std::copy(_II, _II, _OI) [with _II = int**; _OI = int**]	32	static
+stl_algobase.h:641:5:_BI2 std::copy_backward(_BI1, _BI1, _BI2) [with _BI1 = int**; _BI2 = int**]	32	static
+new_allocator.h:102:7:_Tp* __gnu_cxx::new_allocator<_Tp>::allocate(__gnu_cxx::new_allocator<_Tp>::size_type, const void*) [with _Tp = int]	24	static
+new_allocator.h:132:7:__gnu_cxx::new_allocator<_Tp>::size_type __gnu_cxx::new_allocator<_Tp>::max_size() const [with _Tp = int*]	16	static
+new_allocator.h:132:7:__gnu_cxx::new_allocator<_Tp>::size_type __gnu_cxx::new_allocator<_Tp>::max_size() const [with _Tp = int]	16	static
+cpp_type_traits.h:428:5:_Iterator std::__miter_base(_Iterator) [with _Iterator = int**]	16	static
+stl_algobase.h:438:5:_OI std::__copy_move_a2(_II, _II, _OI) [with bool _IsMove = false; _II = int**; _OI = int**]	32	static
+stl_algobase.h:613:5:_BI2 std::__copy_move_backward_a2(_BI1, _BI1, _BI2) [with bool _IsMove = false; _BI1 = int**; _BI2 = int**]	32	static
+stl_algobase.h:280:5:_Iterator std::__niter_base(_Iterator) [with _Iterator = int**]	16	static
+stl_algobase.h:393:5:_OI std::__copy_move_a(_II, _II, _OI) [with bool _IsMove = false; _II = int**; _OI = int**]	32	static
+stl_algobase.h:295:5:_Iterator std::__niter_wrap(const _Iterator&, _Iterator) [with _Iterator = int**]	16	static
+stl_algobase.h:595:5:_BI2 std::__copy_move_backward_a(_BI1, _BI1, _BI2) [with bool _IsMove = false; _BI1 = int**; _BI2 = int**]	32	static
+stl_algobase.h:375:2:static _Tp* std::__copy_move<_IsMove, true, std::random_access_iterator_tag>::__copy_m(const _Tp*, const _Tp*, _Tp*) [with _Tp = int*; bool _IsMove = false]	32	static
+stl_algobase.h:577:2:static _Tp* std::__copy_move_backward<_IsMove, true, std::random_access_iterator_tag>::__copy_move_b(const _Tp*, const _Tp*, _Tp*) [with _Tp = int*; bool _IsMove = false]	32	static

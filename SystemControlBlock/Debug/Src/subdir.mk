@@ -9,19 +9,31 @@ C_SRCS += \
 ../Src/sysmem.c 
 
 CPP_SRCS += \
-../Src/main.cpp 
+../Src/faults.cpp \
+../Src/handler.cpp \
+../Src/main.cpp \
+../Src/scb.cpp \
+../Src/systick.cpp 
 
 C_DEPS += \
 ./Src/syscalls.d \
 ./Src/sysmem.d 
 
 OBJS += \
+./Src/faults.o \
+./Src/handler.o \
 ./Src/main.o \
+./Src/scb.o \
 ./Src/syscalls.o \
-./Src/sysmem.o 
+./Src/sysmem.o \
+./Src/systick.o 
 
 CPP_DEPS += \
-./Src/main.d 
+./Src/faults.d \
+./Src/handler.d \
+./Src/main.d \
+./Src/scb.d \
+./Src/systick.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -33,7 +45,7 @@ Src/%.o: ../Src/%.c Src/subdir.mk
 clean: clean-Src
 
 clean-Src:
-	-$(RM) ./Src/main.d ./Src/main.o ./Src/syscalls.d ./Src/syscalls.o ./Src/sysmem.d ./Src/sysmem.o
+	-$(RM) ./Src/faults.d ./Src/faults.o ./Src/handler.d ./Src/handler.o ./Src/main.d ./Src/main.o ./Src/scb.d ./Src/scb.o ./Src/syscalls.d ./Src/syscalls.o ./Src/sysmem.d ./Src/sysmem.o ./Src/systick.d ./Src/systick.o
 
 .PHONY: clean-Src
 
