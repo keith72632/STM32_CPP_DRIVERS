@@ -1,3 +1,4 @@
 scb.cpp:10:7:void SCB::SHCRS::mem_fault_enable()	16	static
 scb.cpp:15:7:void SCB::SHCRS::bus_fault_enable()	16	static
 scb.cpp:20:7:void SCB::SHCRS::usg_fault_enable()	16	static
+scb.cpp:25:7:void SCB::SHCRS::all_faults_enable()	16	static

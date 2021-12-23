@@ -30,6 +30,12 @@ extern "C" void UsageFault_Handler()
 	while(1);
 }
 
+extern "C" void SysTick_Handler()
+{
+	printf("tick\n");
+	while(1);
+}
+
 namespace Faults {
 	void gen_usage_fault()
 	{

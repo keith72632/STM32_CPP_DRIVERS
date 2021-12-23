@@ -1,0 +1,32 @@
+/*
+ * vector.cpp
+ *
+ *  Created on: Dec 20, 2021
+ *      Author: khorton
+ */
+#include <stdio.h>
+
+extern "C" void HardFault_Handler()
+{
+	printf("Hardfault\n");
+	while(1);
+}
+
+extern "C" void MemManage_Handler()
+{
+	printf("Memory Manage Fault\n");
+	while(1);
+}
+
+extern "C" void BusFault_Handler()
+{
+	printf("Bus Fault\n");
+	while(1);
+}
+
+extern "C" void UsageFault_Handler()
+{
+	printf("Usage Fault\n");
+	while(1);
+}
+

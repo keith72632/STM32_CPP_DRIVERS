@@ -18,17 +18,26 @@
 
 #include <stdint.h>
 #include <stdio.h>
+#include <algorithm>
+#include <array>
 #include "scb.h"
 #include "faults.h"
+#include "systick.h"
 int main(void)
 {
+	//just some dumb shit
+	std::array<char, 5> list{{'s', 't', 'a', 'r', 't'}};
+	std::for_each(list.begin(), list.end(), [](char e){ printf("%c\n", e); });
     /* Loop forever */
-	SCB::SHCRS_t *shcrs = (SCB::SHCRS_t*)0xE000ED24;
-	shcrs->mem_fault_enable();
-	shcrs->bus_fault_enable();
-	shcrs->usg_fault_enable();
+	SCB::SCB *scb = (SCB::SCB*)0xe000ed00;
 
-	Faults::gen_memory_fault();
+	scb->shcrs.all_faults_enable();
+//	Faults::gen_memory_fault();
+
+	Systick::systick *syst = (Systick::systick*)0xe000e010;
+	syst->control_status_reg.systick_enable();
+	//todo
+	syst->current_val.set_current(0x01);
 
 	for(;;);
 }

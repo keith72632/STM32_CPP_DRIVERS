@@ -6,15 +6,18 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
 ../Inc/faults.cpp \
-../Inc/scb.cpp 
+../Inc/scb.cpp \
+../Inc/systick.cpp 
 
 OBJS += \
 ./Inc/faults.o \
-./Inc/scb.o 
+./Inc/scb.o \
+./Inc/systick.o 
 
 CPP_DEPS += \
 ./Inc/faults.d \
-./Inc/scb.d 
+./Inc/scb.d \
+./Inc/systick.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -24,7 +27,7 @@ Inc/%.o: ../Inc/%.cpp Inc/subdir.mk
 clean: clean-Inc
 
 clean-Inc:
-	-$(RM) ./Inc/faults.d ./Inc/faults.o ./Inc/scb.d ./Inc/scb.o
+	-$(RM) ./Inc/faults.d ./Inc/faults.o ./Inc/scb.d ./Inc/scb.o ./Inc/systick.d ./Inc/systick.o
 
 .PHONY: clean-Inc
 

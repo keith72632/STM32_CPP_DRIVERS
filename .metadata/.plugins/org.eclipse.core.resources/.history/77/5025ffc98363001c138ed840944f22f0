@@ -1,0 +1,20 @@
+/*
+ * systick.h
+ *
+ *  Created on: Dec 22, 2021
+ *      Author: khorton
+ */
+
+#ifndef SYSTICK_H_
+#define SYSTICK_H_
+
+
+namespace Systick {
+
+	typedef struct systick {
+
+	}systick_t;
+}
+
+
+#endif /* SYSTICK_H_ */

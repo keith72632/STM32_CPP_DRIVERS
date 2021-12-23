@@ -1,7 +1,7 @@
-16:14:33 **** Clean-only build of configuration Debug for project gpio_drivers ****
+18:29:39 **** Clean-only build of configuration Debug for project SystemControlBlock ****
 make -j12 clean 
 rm -rf ./Startup/startup_stm32f407vgtx.d ./Startup/startup_stm32f407vgtx.o
 rm -rf ./Src/main.d ./Src/main.o ./Src/syscalls.d ./Src/syscalls.o ./Src/sysmem.d ./Src/sysmem.o
-rm -rf ./Inc/gpio.d ./Inc/gpio.o ./Inc/rcc.d ./Inc/rcc.o
-rm -rf default.size.stdout gpio_drivers.bin gpio_drivers.elf gpio_drivers.list
+rm -rf ./Inc/faults.d ./Inc/faults.o ./Inc/scb.d ./Inc/scb.o ./Inc/systick.d ./Inc/systick.o
+rm -rf SystemControlBlock.bin SystemControlBlock.elf SystemControlBlock.list default.size.stdout
  

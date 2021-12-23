@@ -1,0 +1,14 @@
+/*
+ * vector.h
+ *
+ *  Created on: Dec 20, 2021
+ *      Author: khorton
+ */
+
+#ifndef VECTOR_H_
+#define VECTOR_H_
+
+namespace Vector {
+
+}
+#endif /* VECTOR_H_ */

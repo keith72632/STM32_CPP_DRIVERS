@@ -1,0 +1,17 @@
+/*
+ * systick.cpp
+ *
+ *  Created on: Dec 22, 2021
+ *      Author: khorton
+ */
+
+
+#include "systick.h"
+
+namespace Systick {
+	void SYST_CSR_t::enable()
+	{
+		this->enable = 0x01;
+	}
+}
+

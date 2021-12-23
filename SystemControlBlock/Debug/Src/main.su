@@ -1,1 +1,8 @@
-main.cpp:23:5:int main()	16	static
+gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	16	static
+main.cpp:30:42:main()::<lambda(char)>	16	static
+main.cpp:26:5:int main()	40	static
+array:126:7:std::array<_Tp, _Nm>::value_type* std::array<_Tp, _Nm>::begin() [with _Tp = char; unsigned int _Nm = 5]	16	static
+array:134:7:std::array<_Tp, _Nm>::value_type* std::array<_Tp, _Nm>::end() [with _Tp = char; unsigned int _Nm = 5]	16	static
+stl_algo.h:3870:5:_Funct std::for_each(_IIter, _IIter, _Funct) [with _IIter = char*; _Funct = main()::<lambda(char)>]	32	static
+array:234:7:std::array<_Tp, _Nm>::value_type* std::array<_Tp, _Nm>::data() [with _Tp = char; unsigned int _Nm = 5]	16	static
+array:59:7:static constexpr _Tp* std::__array_traits<_Tp, _Nm>::_S_ptr(const _Tp (&)[_Nm]) [with _Tp = char; unsigned int _Nm = 5]	16	static

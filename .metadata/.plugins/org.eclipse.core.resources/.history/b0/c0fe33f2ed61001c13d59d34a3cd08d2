@@ -1,0 +1,18 @@
+/*
+ * scb.cpp
+ *
+ *  Created on: Dec 20, 2021
+ *      Author: khorton
+ */
+
+#include <scb.h>
+
+SystemControlBlock::SystemControlBlock() {
+	// TODO Auto-generated constructor stub
+
+}
+
+SystemControlBlock::~SystemControlBlock() {
+	// TODO Auto-generated destructor stub
+}
+

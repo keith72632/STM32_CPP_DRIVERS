@@ -1,0 +1,48 @@
+/*
+ * systick.h
+ *
+ *  Created on: Dec 22, 2021
+ *      Author: khorton
+ */
+
+#ifndef SYSTICK_H_
+#define SYSTICK_H_
+
+#include <stdint.h>
+
+namespace Systick {
+
+	typedef struct SYST_CSR {
+	private:
+		uint32_t enable        :1;
+		uint32_t tick_int      :1;
+		uint32_t clk_source    :1;
+		uint32_t reserved1     :13;
+		uint32_t count_flag    :1;
+		uint32_t reserved2     :15;
+	public:
+		void systick_enable();
+	}__attribute__((packed))SYST_CSR_t;
+
+	typedef struct SYST_RVR {
+	private:
+		uint32_t reload    :24;
+		uint32_t reserved  :8;
+	public:
+		void load(uint32_t reloadval);
+	}__attribute__((packed))SYST_RVR_t;
+
+	typedef struct SYST_CVR {
+	private:
+		uint32_t current    :24;
+		uint32_t reserved   :8;
+	}__attribute__((packed))SYST_CVR_t;
+
+	typedef struct systick {
+		SYST_CSR_t control_status_reg;
+		SYST_RVR_t reload_reg;
+	}__attribute__((packed))systick_t;
+}
+
+
+#endif /* SYSTICK_H_ */

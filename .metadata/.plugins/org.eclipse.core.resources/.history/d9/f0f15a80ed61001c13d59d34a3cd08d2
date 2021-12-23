@@ -1,0 +1,20 @@
+/*
+ * scb.h
+ *
+ *  Created on: Dec 20, 2021
+ *      Author: khorton
+ */
+
+#ifndef SCB_H_
+#define SCB_H_
+
+#include <stdint.h>
+
+
+namespace SCB {
+	typedef struct SHCRS{
+
+	}SHCRS_t;
+}
+
+#endif /* SCB_H_ */

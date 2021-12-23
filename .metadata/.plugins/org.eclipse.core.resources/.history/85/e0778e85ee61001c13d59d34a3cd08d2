@@ -1,0 +1,14 @@
+/*
+ * scb.cpp
+ *
+ *  Created on: Dec 20, 2021
+ *      Author: khorton
+ */
+
+#include <scb.h>
+namespace SCB {
+	void SHCRS_t::mem_fault_enable()
+	{
+		this->mem_fault_enable() = 0x01;
+	}
+}
