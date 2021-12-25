@@ -1,24 +1,27 @@
-17:47:43 **** Incremental Build of configuration Debug for project SystemControlBlock ****
+21:04:17 **** Build of configuration Debug for project Uart ****
 make -j12 all 
-arm-none-eabi-g++ "../Src/handler.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Src/handler.d" -MT"Src/handler.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/handler.o"
-arm-none-eabi-g++ -o "SystemControlBlock.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/khorton/Documents/EmbededCppDrivers/SystemControlBlock/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SystemControlBlock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
-Finished building target: SystemControlBlock.elf
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-g++ -o "Uart.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/khorton/Documents/EmbededCppDrivers/Uart/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Uart.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Uart.elf
  
-arm-none-eabi-size   SystemControlBlock.elf 
-arm-none-eabi-objdump -h -S  SystemControlBlock.elf  > "SystemControlBlock.list"
-arm-none-eabi-objcopy  -O binary  SystemControlBlock.elf  "SystemControlBlock.bin"
+arm-none-eabi-size   Uart.elf 
+arm-none-eabi-objdump -h -S  Uart.elf  > "Uart.list"
+arm-none-eabi-objcopy  -O binary  Uart.elf  "Uart.bin"
    text	   data	    bss	    dec	    hex	filename
-   9620	    120	   1600	  11340	   2c4c	SystemControlBlock.elf
+   3752	    128	   1592	   5472	   1560	Uart.elf
 Finished building: default.size.stdout
  
-Finished building: SystemControlBlock.bin
+Finished building: Uart.bin
  
-Finished building: SystemControlBlock.list
+Finished building: Uart.list
  
-17:47:48 **** Incremental Build of configuration Debug for project SystemControlBlock ****
+21:04:23 **** Incremental Build of configuration Debug for project Uart ****
 make -j12 all 
-arm-none-eabi-size   SystemControlBlock.elf 
+arm-none-eabi-size   Uart.elf 
    text	   data	    bss	    dec	    hex	filename
-   9620	    120	   1600	  11340	   2c4c	SystemControlBlock.elf
+   3752	    128	   1592	   5472	   1560	Uart.elf
 Finished building: default.size.stdout
  

@@ -8,7 +8,7 @@
 #include <stdint.h>
 #include <stdio.h>
 
-uint32_t *odr = (uint32_t*)0x40020c14;
+uint32_t volatile *odr = (uint32_t*)0x40020c14;
 
 extern "C" {
 	__attribute__((naked)) void SysTick_Handler()

@@ -1742,25 +1742,25 @@ LOAD /opt/st/stm32cubeide_1.8.0/plugins/com.st.stm32cube.ide.mcu.externaltools.g
 LOAD /opt/st/stm32cubeide_1.8.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.linux64_2.0.0.202105311346/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a
 LOAD /opt/st/stm32cubeide_1.8.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.linux64_2.0.0.202105311346/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m/nofp/libgcc.a
 
-.debug_info     0x0000000000000000     0xc4fa
+.debug_info     0x0000000000000000     0xc505
  .debug_info    0x0000000000000000      0xa11 ./Src/faults.o
- .debug_info    0x0000000000000a11      0x98a ./Src/handler.o
- .debug_info    0x000000000000139b     0x91b6 ./Src/main.o
- .debug_info    0x000000000000a551      0x2c7 ./Src/scb.o
- .debug_info    0x000000000000a818      0xff9 ./Src/syscalls.o
- .debug_info    0x000000000000b811      0xa25 ./Src/sysmem.o
- .debug_info    0x000000000000c236      0x2a2 ./Src/systick.o
- .debug_info    0x000000000000c4d8       0x22 ./Startup/startup_stm32f407vgtx.o
+ .debug_info    0x0000000000000a11      0x98f ./Src/handler.o
+ .debug_info    0x00000000000013a0     0x91bc ./Src/main.o
+ .debug_info    0x000000000000a55c      0x2c7 ./Src/scb.o
+ .debug_info    0x000000000000a823      0xff9 ./Src/syscalls.o
+ .debug_info    0x000000000000b81c      0xa25 ./Src/sysmem.o
+ .debug_info    0x000000000000c241      0x2a2 ./Src/systick.o
+ .debug_info    0x000000000000c4e3       0x22 ./Startup/startup_stm32f407vgtx.o
 
-.debug_abbrev   0x0000000000000000     0x14e6
+.debug_abbrev   0x0000000000000000     0x14f5
  .debug_abbrev  0x0000000000000000      0x1c7 ./Src/faults.o
- .debug_abbrev  0x00000000000001c7      0x1c0 ./Src/handler.o
- .debug_abbrev  0x0000000000000387      0xa9b ./Src/main.o
- .debug_abbrev  0x0000000000000e22      0x111 ./Src/scb.o
- .debug_abbrev  0x0000000000000f33      0x2b1 ./Src/syscalls.o
- .debug_abbrev  0x00000000000011e4      0x1bf ./Src/sysmem.o
- .debug_abbrev  0x00000000000013a3      0x131 ./Src/systick.o
- .debug_abbrev  0x00000000000014d4       0x12 ./Startup/startup_stm32f407vgtx.o
+ .debug_abbrev  0x00000000000001c7      0x1c7 ./Src/handler.o
+ .debug_abbrev  0x000000000000038e      0xaa3 ./Src/main.o
+ .debug_abbrev  0x0000000000000e31      0x111 ./Src/scb.o
+ .debug_abbrev  0x0000000000000f42      0x2b1 ./Src/syscalls.o
+ .debug_abbrev  0x00000000000011f3      0x1bf ./Src/sysmem.o
+ .debug_abbrev  0x00000000000013b2      0x131 ./Src/systick.o
+ .debug_abbrev  0x00000000000014e3       0x12 ./Startup/startup_stm32f407vgtx.o
 
 .debug_aranges  0x0000000000000000      0x430
  .debug_aranges

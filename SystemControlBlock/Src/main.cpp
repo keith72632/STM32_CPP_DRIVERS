@@ -26,8 +26,8 @@
 #include "systick.h"
 
 	//led lights
-uint32_t *rcc_d = (uint32_t*)0x40023830;
-uint32_t *mode = (uint32_t*)0x40020c00;
+uint32_t volatile *rcc_d = (uint32_t*)0x40023830;
+uint32_t volatile *mode = (uint32_t*)0x40020c00;
 
 
 int main(void)

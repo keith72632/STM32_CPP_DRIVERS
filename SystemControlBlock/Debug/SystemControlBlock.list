@@ -29,23 +29,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  12 .ARM.attributes 0000002a  00000000  00000000  00020070  2**0
                   CONTENTS, READONLY
- 13 .debug_info   0000c4fa  00000000  00000000  0002009a  2**0
+ 13 .debug_info   0000c505  00000000  00000000  0002009a  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_abbrev 000014e6  00000000  00000000  0002c594  2**0
+ 14 .debug_abbrev 000014f5  00000000  00000000  0002c59f  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_aranges 00000430  00000000  00000000  0002da80  2**3
+ 15 .debug_aranges 00000430  00000000  00000000  0002da98  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_ranges 000003b8  00000000  00000000  0002deb0  2**3
+ 16 .debug_ranges 000003b8  00000000  00000000  0002dec8  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_macro  0000548e  00000000  00000000  0002e268  2**0
+ 17 .debug_macro  0000548e  00000000  00000000  0002e280  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   0000398a  00000000  00000000  000336f6  2**0
+ 18 .debug_line   0000398a  00000000  00000000  0003370e  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    000179cc  00000000  00000000  00037080  2**0
+ 19 .debug_str    000179cc  00000000  00000000  00037098  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .comment      00000053  00000000  00000000  0004ea4c  2**0
+ 20 .comment      00000053  00000000  00000000  0004ea64  2**0
                   CONTENTS, READONLY
- 21 .debug_frame  00001bd8  00000000  00000000  0004eaa0  2**2
+ 21 .debug_frame  00001bd8  00000000  00000000  0004eab8  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -197,7 +197,7 @@ extern "C" {
  80002cc:	080024ac 	.word	0x080024ac
 
 080002d0 <SysTick_Handler>:
-uint32_t *odr = (uint32_t*)0x40020c14;
+uint32_t volatile *odr = (uint32_t*)0x40020c14;
 
 extern "C" {
 	__attribute__((naked)) void SysTick_Handler()
@@ -358,13 +358,12 @@ _GLIBCXX_NODISCARD inline void* operator new(std::size_t, void* __p) _GLIBCXX_US
 	SCB::SCB *scb = (SCB::SCB*)0xe000ed00;
  80003c8:	4b18      	ldr	r3, [pc, #96]	; (800042c <main+0xbc>)
  80003ca:	647b      	str	r3, [r7, #68]	; 0x44
-
 	scb->shcrs.all_faults_enable();
  80003cc:	6c7b      	ldr	r3, [r7, #68]	; 0x44
  80003ce:	3324      	adds	r3, #36	; 0x24
  80003d0:	4618      	mov	r0, r3
  80003d2:	f000 fe5f 	bl	8001094 <_ZN3SCB5SHCRS17all_faults_enableEv>
-//	Faults::gen_memory_fault();
+	//Faults::gen_memory_fault();
 
 	Systick::systick *syst = (Systick::systick*)0xe000e010;
  80003d6:	4b16      	ldr	r3, [pc, #88]	; (8000430 <main+0xc0>)
@@ -377,7 +376,8 @@ _GLIBCXX_NODISCARD inline void* operator new(std::size_t, void* __p) _GLIBCXX_US
  80003e2:	6c3b      	ldr	r3, [r7, #64]	; 0x40
  80003e4:	4618      	mov	r0, r3
  80003e6:	f000 ff5b 	bl	80012a0 <_ZN7Systick8SYST_CSR11systick_intEv>
-	//todo
+
+	//this 24 bit value is the time between "ticks"
 	syst->reload_reg.load(0xfffff);
  80003ea:	6c3b      	ldr	r3, [r7, #64]	; 0x40
  80003ec:	3304      	adds	r3, #4
@@ -385,6 +385,7 @@ _GLIBCXX_NODISCARD inline void* operator new(std::size_t, void* __p) _GLIBCXX_US
  80003f0:	4618      	mov	r0, r3
  80003f2:	f000 ff63 	bl	80012bc <_ZN7Systick8SYST_RVR4loadEm>
 
+	//pushing this garbage just to check stack analyzation in systick handler
 	std::stack<int> stck;
  80003f6:	1d3b      	adds	r3, r7, #4
  80003f8:	4618      	mov	r0, r3
@@ -397,7 +398,6 @@ _GLIBCXX_NODISCARD inline void* operator new(std::size_t, void* __p) _GLIBCXX_US
  8000408:	4611      	mov	r1, r2
  800040a:	4618      	mov	r0, r3
  800040c:	f000 f856 	bl	80004bc <_ZNSt5stackIiSt5dequeIiSaIiEEE4pushEOi>
-
 	uint32_t val = stck.top();
  8000410:	1d3b      	adds	r3, r7, #4
  8000412:	4618      	mov	r0, r3
