@@ -1,8 +1,9 @@
 usart.cpp:11:1:Usart::Usart(USART_t)	16	static
-usart.cpp:40:6:void Usart::init_clocks()	16	static
-usart.cpp:56:6:void Usart::config_gpio()	16	static
-usart.cpp:62:6:void Usart::config_usart()	16	static
-usart.cpp:68:6:void Usart::put(char)	16	static
-usart.cpp:74:6:void Usart::puts(char*)	16	static
-usart.cpp:83:1:Usart::~Usart()	16	static
-usart.cpp:83:1:virtual Usart::~Usart()	16	static
+usart.cpp:47:6:void Usart::init_clocks()	16	static
+usart.cpp:66:6:void Usart::config_gpio()	16	static
+usart.cpp:82:6:void Usart::config_usart()	16	static
+usart.cpp:88:6:void Usart::put(char)	16	static
+usart.cpp:94:6:void Usart::puts(char*)	16	static
+usart.cpp:104:10:uint32_t Usart::get()	24	static
+usart.cpp:111:1:Usart::~Usart()	16	static
+usart.cpp:111:1:virtual Usart::~Usart()	16	static

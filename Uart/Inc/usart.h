@@ -26,6 +26,7 @@ class Usart {
 		uint32_t volatile *_rcc_gpio;
 		uint32_t volatile *_gpio_mode;
 		uint32_t volatile *_gpio_aflr;
+		uint32_t volatile *_gpio_afhr;
 		uint32_t volatile *_usart_cr1;
 		uint32_t volatile *_usart_brr;
 		uint32_t volatile *_usart_sr;
@@ -38,6 +39,7 @@ class Usart {
 		void config_usart();
 		void put(char c);
 		void puts(char *s);
+		uint32_t get(void);
 		virtual ~Usart();
 };
 

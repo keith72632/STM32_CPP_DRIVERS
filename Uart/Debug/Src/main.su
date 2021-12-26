@@ -1,1 +1,3 @@
-main.cpp:22:5:int main()	64	static
+main.cpp:27:6:void init_led()	4	static
+main.cpp:33:6:void toggle_led()	4	static
+main.cpp:38:5:int main()	104	static

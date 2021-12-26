@@ -18,17 +18,40 @@
 #include <stdio.h>
 #include <stdint.h>
 #include "usart.h"
+#include "stm32f407xx.h"
+
+uint32_t volatile *rcc = (uint32_t*)RCC_AHB1;
+uint32_t volatile *mode = (uint32_t*)0x40020c00;
+uint32_t volatile *odr = (uint32_t*)0x40020c14;
+
+void init_led()
+{
+	*rcc |= (1 << 3);
+	*mode |= (1 << 30);
+}
+
+void toggle_led()
+{
+	*odr ^= (1 << 15);
+}
 
 int main(void)
 {
-	Usart usart2 = Usart(USART2);
-	usart2.init_clocks();
-	usart2.config_gpio();
-	usart2.config_usart();
-    /* Loop forever */
-	while(1)
-	{	char s[] = "keith\r\n";
-		usart2.puts(s);
-		for(int i = 0; i < 1000000; i++){};
-	}
+	init_led();
+
+	Usart ustream = Usart(USART3);
+	ustream.init_clocks();
+	ustream.config_gpio();
+	ustream.config_usart();
+	char s[] = "shell>\r\n";
+	ustream.puts(s);
+	for(int i = 0; i < 1000000; i++){};
+
+	while(1){
+		char msg[] = "after button press\n\r";
+		uint32_t data = ustream.get();
+		if(data)
+			toggle_led();
+		ustream.puts(msg);
+	};
 }
