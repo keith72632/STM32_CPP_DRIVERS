@@ -1,0 +1,33 @@
+/*
+ * stm32f407xx.h
+ *
+ *  Created on: Dec 25, 2021
+ *      Author: khorton
+ */
+
+#ifndef STM32F407XX_H_
+#define STM32F407XX_H_
+
+#define RCC_USART1 0x40023844;
+#define RCC_USART2 0x40023840;
+#define RCC_GPIOA  0x40023830;
+		this->_gpio_mode = (uint32_t*)0x40020000;
+		this->_gpio_aflr = (uint32_t*)0x40020020;
+		this->_usart_cr1 = (uint32_t*)0x4000440c;
+		this->_usart_brr = (uint32_t*)0x40004408;
+		this->_usart_sr = (uint32_t*)0x40004400;
+		this->_usart_dr = (uint32_t*)0x40004404;
+		break;
+	case USART3:
+		this->_rcc_usart = (uint32_t*)0x40023840;
+		break;
+	case USART6:
+		this->_rcc_usart = (uint32_t*)0x40023844;
+		break;
+	default:
+		this->_rcc_usart = NULL;
+	}
+
+
+
+#endif /* STM32F407XX_H_ */

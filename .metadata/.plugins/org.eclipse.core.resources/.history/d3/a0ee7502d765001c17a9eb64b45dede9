@@ -1,0 +1,46 @@
+/*
+ * usart.cpp
+ *
+ *  Created on: Dec 25, 2021
+ *      Author: khorton
+ */
+
+#include <usart.h>
+
+Usart::Usart(USART_t usart) {
+	// TODO Auto-generated constructor stub
+	this->_usart = usart;
+	switch(usart)
+	{
+	case USART1:
+		this->_rcc_usart = (uint32_t*)0x40023844;
+		break;
+	case USART2:
+		this->_rcc_usart = (uint32_t*)0x40023840;
+		break;
+	case USART3:
+		this->_rcc_usart = (uint32_t*)0x40023840;
+		break;
+	case USART6:
+		this->_rcc_usart = (uint32_t*)0x40023844;
+		break;
+	default:
+		this->_rcc_usart = NULL;
+	}
+}
+
+void Usart::init_clocks(void)
+{
+	switch(this->_usart)
+	{
+	case USART1:
+		this->_rcc_usart |= 1 << 4;
+	case USART2:
+		this->_rcc_usart |= 1 << 17;
+	}
+}
+
+Usart::~Usart() {
+	// TODO Auto-generated destructor stub
+}
+

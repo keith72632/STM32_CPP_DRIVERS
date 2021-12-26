@@ -1,0 +1,18 @@
+/*
+ * usart.cpp
+ *
+ *  Created on: Dec 25, 2021
+ *      Author: khorton
+ */
+
+#include <usart.h>
+
+Usart::Usart() {
+	// TODO Auto-generated constructor stub
+
+}
+
+Usart::~Usart() {
+	// TODO Auto-generated destructor stub
+}
+

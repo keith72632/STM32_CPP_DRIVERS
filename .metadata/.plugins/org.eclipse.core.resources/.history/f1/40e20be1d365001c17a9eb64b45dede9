@@ -1,0 +1,17 @@
+/*
+ * usart.h
+ *
+ *  Created on: Dec 25, 2021
+ *      Author: khorton
+ */
+
+#ifndef USART_H_
+#define USART_H_
+
+class Usart {
+public:
+	Usart();
+	virtual ~Usart();
+};
+
+#endif /* USART_H_ */

@@ -1,2 +1,4 @@
 1640044898563	Delete resource 'SystemControlBlock/Inc/vector.h'
 1640301499806	Delete resource 'SystemControlBlock/Src/handlers.cpp'
+1640472048056	Delete resource 'Uart/Inc/usart.h'
+1640472054846	Delete resource 'Uart/Src/usart.cpp'

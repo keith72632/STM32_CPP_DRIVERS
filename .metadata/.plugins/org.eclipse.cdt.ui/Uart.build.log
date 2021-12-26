@@ -1,10 +1,9 @@
-21:04:23 **** Incremental Build of configuration Debug for project Uart ****
-make -j12 all 
-arm-none-eabi-size   Uart.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3752	    128	   1592	   5472	   1560	Uart.elf
-Finished building: default.size.stdout
+18:07:44 **** Clean-only build of configuration Debug for project Uart ****
+make -j12 clean 
+rm -rf ./Startup/startup_stm32f407vgtx.d ./Startup/startup_stm32f407vgtx.o
+rm -rf ./Src/main.d ./Src/main.o ./Src/syscalls.d ./Src/syscalls.o ./Src/sysmem.d ./Src/sysmem.o ./Src/usart.d ./Src/usart.o
+rm -rf Uart.bin Uart.elf Uart.list default.size.stdout
  
 
-21:04:23 Build Finished. 0 errors, 0 warnings. (took 269ms)
+18:07:44 Build Finished. 0 errors, 0 warnings. (took 279ms)
 
