@@ -54,9 +54,7 @@ int main(void)
 	for(int i = 0; i < 1000000; i++){};
 
 	while(1){
-		uint32_t data = ustream.get();
-		if(data)
-			toggle_led();
+
 	};
 }
 
